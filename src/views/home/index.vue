@@ -1,23 +1,140 @@
 <template>
-  <div class="max-w-sm w-full lg:max-w-full lg:flex" style="margin-top: 20px;">
-    <!-- <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('https://tailwindcss.com/img/card-left.jpg')" title="Woman holding a mug">
-    </div> -->
-    <div class="border-r border-b border-l border-t border-gray-400 lg:border-l lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-      <div class="mb-8">
-        <p class="text-sm text-gray-600 flex items-center">
-          <svg class="fill-current text-gray-500 w-3 h-3 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-            <path d="M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z" />
-          </svg>
-          Members only
-        </p>
-        <div class="text-gray-900 font-bold text-xl mb-2">Can coffee make you a better developer?</div>
-        <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
+  <div class="bg-gray-300 h-full text-gray-600 flex flex-col">
+    <div class="p-4 flex flex-wrap">
+      <div class="p-2">
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded">
+          100
+        </button>
       </div>
-      <div class="flex items-center">
-        <img class="w-10 h-10 rounded-full mr-4" src="https://tailwindcss.com/img/jonathan.jpg" alt="Avatar of Jonathan Reinink">
-        <div class="text-sm">
-          <p class="text-gray-900 leading-none">Jonathan Reinink</p>
-          <p class="text-gray-600">Aug 18</p>
+      <div class="p-2">
+        <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-8 border border-gray-400 rounded shadow">
+          200
+        </button>
+      </div>
+      <div class="p-2">
+        <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-8 border border-gray-400 rounded shadow">
+          300
+        </button>
+      </div>
+      <div class="p-2">
+        <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-8 border border-gray-400 rounded shadow">
+          400
+        </button>
+      </div>
+      <div class="p-2">
+        <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-8 border border-gray-400 rounded shadow">
+          500
+        </button>
+      </div>
+      <div class="p-2">
+        <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-8 border border-gray-400 rounded shadow">
+          600
+        </button>
+      </div>
+      <div class="p-2">
+        <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-8 border border-gray-400 rounded shadow">
+          700
+        </button>
+      </div>
+      <div class="p-2">
+        <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-8 border border-gray-400 rounded shadow">
+          800
+        </button>
+      </div>
+      <div class="p-2">
+        <a href="" class="inline-flex text-blue-800 px-4 py-2 items-center">查看更多</a>
+      </div>
+    </div>
+
+    <div class="p-4 flex flex-wrap">
+      <div class="p-2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
+        <div class="bg-white p-2 shadow h-64 md:h-48 w-full">
+          <img
+            src="https://tailwindcss.com/img/card-left.jpg"
+            alt=""
+            class="h-full w-full object-cover"
+          />
+        </div>
+      </div>
+      <div class="p-2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
+        <div class="bg-white p-2 shadow h-64 md:h-48 w-full">
+          <img
+            src="https://tailwindcss.com/img/card-left.jpg"
+            alt=""
+            class="h-full w-full object-cover"
+          />
+        </div>
+      </div>
+      <div class="p-2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
+        <div class="bg-white p-2 shadow h-64 md:h-48 w-full">
+          <img
+            src="https://tailwindcss.com/img/card-left.jpg"
+            alt=""
+            class="h-full w-full object-cover"
+          />
+        </div>
+      </div>
+      <div class="p-2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
+        <div class="bg-white p-2 shadow h-64 md:h-48 w-full">
+          <img
+            src="https://tailwindcss.com/img/card-left.jpg"
+            alt=""
+            class="h-full w-full object-cover"
+          />
+        </div>
+      </div>
+      <div class="p-2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
+        <div class="bg-white p-2 shadow h-64 md:h-48 w-full">
+          <img
+            src="https://tailwindcss.com/img/card-left.jpg"
+            alt=""
+            class="h-full w-full object-cover"
+          />
+        </div>
+      </div>
+      <div class="p-2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
+        <div class="bg-white p-2 shadow h-64 md:h-48 w-full">
+          <img
+            src="https://tailwindcss.com/img/card-left.jpg"
+            alt=""
+            class="h-full w-full object-cover"
+          />
+        </div>
+      </div>
+      <div class="p-2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
+        <div class="bg-white p-2 shadow h-64 md:h-48 w-full">
+          <img
+            src="https://tailwindcss.com/img/card-left.jpg"
+            alt=""
+            class="h-full w-full object-cover"
+          />
+        </div>
+      </div>
+      <div class="p-2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
+        <div class="bg-white p-2 shadow h-64 md:h-48 w-full">
+          <img
+            src="https://tailwindcss.com/img/card-left.jpg"
+            alt=""
+            class="h-full w-full object-cover"
+          />
+        </div>
+      </div>
+      <div class="p-2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
+        <div class="bg-white p-2 shadow h-64 md:h-48 w-full">
+          <img
+            src="https://tailwindcss.com/img/card-left.jpg"
+            alt=""
+            class="h-full w-full object-cover"
+          />
+        </div>
+      </div>
+      <div class="p-2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
+        <div class="bg-white p-2 shadow h-64 md:h-48 w-full">
+          <img
+            src="https://tailwindcss.com/img/card-left.jpg"
+            alt=""
+            class="h-full w-full object-cover"
+          />
         </div>
       </div>
     </div>
@@ -26,8 +143,8 @@
 
 <script>
 export default {
-  name: 'Home',
-}
+  name: "Home",
+};
 </script>
 
 <style lang="less" scoped>
