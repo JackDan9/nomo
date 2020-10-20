@@ -1,6 +1,7 @@
 <template>
   <div class="lg">
-    <global-header />
+    <!-- <global-header /> -->
+    <recall-header />
     <div class="lg:container lg:mx-auto">
       <app-main />
     </div>
@@ -9,13 +10,21 @@
 
 <script>
 import { AppMain } from './components';
-import GlobalHeader from '../components/header/GlobalHeader.vue';
+import HomeHeader from '@/components/header/home/HomeHeader';
+import RecallHeader from '@/components/header/recall/RecallHeader';
 
 export default {
   name: 'Layout',
+  watch: {
+    '$route': 'rounterChange'
+  },
+  routerChange: function(to, from) {
+    console.log(to.path)
+  },
   components: {
     AppMain,
-    GlobalHeader
+    HomeHeader,
+    RecallHeader
   },
 };
 </script>

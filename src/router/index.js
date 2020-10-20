@@ -3,7 +3,10 @@ import Router from "vue-router";
 
 Vue.use(Router);
 
-import Layout from '../layout/index.vue';
+/* Layout */
+import Layout from '@/layout';
+
+
 
 /**
  * constantRoutes
@@ -18,8 +21,19 @@ export const constantRoutes = [
     children: [
       {
         path: 'home',
-        component: () => import('../views/home/index.vue'),
+        component: () => import('@/views/home/index'),
         name: 'Home'
+      }
+    ]
+  },
+  {
+    path: '/recall',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/recall/index'),
+        name: 'Recall'
       }
     ]
   }

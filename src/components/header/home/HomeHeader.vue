@@ -1,10 +1,10 @@
 <template>
-  <div class="h-48 sm:h-12 md:h-48 lg:h-20 xl:h-24 bg-blue-600">
+  <div class="h-48 sm:h-48 md:h-48 lg:h-20 xl:h-24 bg-blue-600">
     <div class="lg:container lg:mx-auto 
                 flex flex-wrap 
                 items-center justify-between h-full">
       <div class="hidden sm:hidden md:hidden lg:flex xl:flex h-16 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-        <img src="../../assets/logo.png" alt="nomo" class="h-full w-full object-cover" />
+        <img src="@/assets/logo.png" alt="nomo" class="h-full w-full object-cover" />
       </div>
 
       <div class="h-12 sm:h-12 md:h-12 lg:h-16 xl:h-16 flex 
