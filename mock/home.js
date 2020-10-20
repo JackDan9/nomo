@@ -6,13 +6,15 @@ const count = 100;
 for(let i = 0; i < count; i++) {
   List.push(Mock.mock({
     id: '@increment',
-    fly_start_time: '@datetime',
-    fly_end_time: '@datetime',
+    fly_start_time: '06:45',
+    fly_end_time: '09:05',
+    fly_speed_time: '2小时35分钟',
     departure: '大兴国际',
     destination: '浦东机场T1',
     price: '@integer(100, 1000)',
     class: '经济舱',
-    airline: '上海航空9C8542 波音787',
+    airline: '上海航空9C8542',
+    airport: '波音@integer(100, 1000)',
     pageviews: '@integer(300, 5000)',
   }))
 }
@@ -23,9 +25,9 @@ module.exports = [
     type: 'get',
     response: _ => {
       return {
-        code: 2000,
+        code: 200,
         data: {
-          pricesData: [
+          items: [
             {'value': 100},
             {'value': 200},
             {'value': 300},
@@ -34,8 +36,7 @@ module.exports = [
             {'value': 600},
             {'value': 700},
             {'value': 800},
-            {'value': 900},
-            {'value': 1000}
+            {'value': 900}
           ]
         }
       }
@@ -57,7 +58,7 @@ module.exports = [
       const pageList = mockList.filter((item, index) => index < limit * page && index >= limit * (page - 1))
 
       return {
-        code: 2000,
+        code: 200,
         data: {
           total: mockList.length,
           items: pageList

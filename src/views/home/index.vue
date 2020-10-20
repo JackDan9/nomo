@@ -1,130 +1,61 @@
 <template>
   <div class="bg-gray-300 h-full text-gray-600 flex flex-col">
-    <div class="p-4 flex flex-wrap">
-      <div class="p-2" v-for="(item, index) of priceList" :key="index">
+    <div class="flex overflow-x-auto sm:overflow-x-auto sm:w-full lg:overflow-hidden xl:overflow-hidden h-16">
+      <div class="pt-4 pl-4 pr-4" v-for="(item, index) of priceList" :key="index">
         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded">
           {{item.value}}
         </button>
       </div>
-      <div class="p-2">
+      <div class="hidden sm:hidden md:hidden lg:block xl:block pt-4">
         <a href="" class="inline-flex text-blue-800 px-4 py-2 items-center">查看更多</a>
       </div>
     </div>
 
-    <div class="p-4 flex flex-wrap">
-      <div class="p-2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-        <div class="bg-white p-2 shadow h-64 md:h-48 w-full">
+    <div class="flex flex-wrap">
+      <div class="p-4 w-full md:w-1/2 lg:w-1/3 xl:w-1/4" v-for="(item, index) of list" :key="index">
+        <div class="bg-white p-4 shadow h-36 md:h-36 w-full 
+                    border border-gray-400 rounded 
+                    hover:border-blue-600">
           <div class="flex justify-center">
-            <div class="w-1/4">
-              <h2 class="text-xl text-gray-800 font-bold">06:45</h2>
-              <p class="airport">
-                <span class="text-gray-800 text-xs">大兴国际</span>
-                <span class="text-gray-800 text-xs">T1</span>
+            <div class="w-16 text-center">
+              <h2 class="text-xl text-gray-800 font-bold">{{item.fly_start_time}}</h2>
+              <p class="text-gray-800 text-xs">
+                <span>{{item.departure}}</span>
+                <!-- <span>T1</span> -->
               </p>
             </div>
-            <div class="w-2/4">
-              <div class="text-gray-600 text-xs">2小时35分钟</div>
-              <div class="line"></div>
+            <div class="flex-1">
+              <div class="text-gray-600 text-xs text-center">{{item.fly_speed_time}}</div>
+              <div class="line py-1"></div>
             </div>
-            <div class="w-1/4">
-              <h2 class="text-xl text-gray-800 font-bold">08:45</h2>
-              <p class="airport text-no-wrap">
-                <span class="text-gray-800 text-xs">浦东机场</span>
-                <span class="text-gray-800 text-xs">T3</span>
+            <div class="w-16 text-center">
+              <h2 class="text-xl text-gray-800 font-bold">{{item.fly_end_time}}</h2>
+              <p class="text-gray-800 text-xs">
+                <span>{{item.destination}}</span>
+                <!-- <span>T3</span> -->
               </p>
             </div>
           </div>
-
-          <div class="">
-
+          <div class="flex justify-center h-12 mt-10">
+            <div class="w-3/4">
+              <div class="flex items-center">
+                <p>
+                  <span class="text-red-600 text-xs inline-flex items-end justify-end">￥</span>
+                  <span class="text-red-600 text-xl font-bold -ml-1">{{item.price}}</span>
+                </p>
+                <span class="text-gray-400 text-sm ml-3">{{item.class}}</span>
+              </div>
+              <div class="-mt-2">
+                <span class="text-gray-800 text-sm">{{item.airline}}</span>
+                <span class="text-gray-400 text-sm ml-2">{{item.airport}}</span>
+              </div>
+            </div>
+            <div class="flex-1 h-10 mt-1">
+              <button class="w-full h-full bg-white-500 text-blue-500 font-bold rounded border border-blue-500">
+                订票
+              </button>
+            </div>
           </div>
-          <!-- <img
-            src="https://tailwindcss.com/img/card-left.jpg"
-            alt=""
-            class="h-full w-full object-cover"
-          /> -->
-
-        </div>
-      </div>
-      <div class="p-2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-        <div class="bg-white p-2 shadow h-64 md:h-48 w-full">
-          <img
-            src="https://tailwindcss.com/img/card-left.jpg"
-            alt=""
-            class="h-full w-full object-cover"
-          />
-        </div>
-      </div>
-      <div class="p-2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-        <div class="bg-white p-2 shadow h-64 md:h-48 w-full">
-          <img
-            src="https://tailwindcss.com/img/card-left.jpg"
-            alt=""
-            class="h-full w-full object-cover"
-          />
-        </div>
-      </div>
-      <div class="p-2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-        <div class="bg-white p-2 shadow h-64 md:h-48 w-full">
-          <img
-            src="https://tailwindcss.com/img/card-left.jpg"
-            alt=""
-            class="h-full w-full object-cover"
-          />
-        </div>
-      </div>
-      <div class="p-2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-        <div class="bg-white p-2 shadow h-64 md:h-48 w-full">
-          <img
-            src="https://tailwindcss.com/img/card-left.jpg"
-            alt=""
-            class="h-full w-full object-cover"
-          />
-        </div>
-      </div>
-      <div class="p-2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-        <div class="bg-white p-2 shadow h-64 md:h-48 w-full">
-          <img
-            src="https://tailwindcss.com/img/card-left.jpg"
-            alt=""
-            class="h-full w-full object-cover"
-          />
-        </div>
-      </div>
-      <div class="p-2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-        <div class="bg-white p-2 shadow h-64 md:h-48 w-full">
-          <img
-            src="https://tailwindcss.com/img/card-left.jpg"
-            alt=""
-            class="h-full w-full object-cover"
-          />
-        </div>
-      </div>
-      <div class="p-2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-        <div class="bg-white p-2 shadow h-64 md:h-48 w-full">
-          <img
-            src="https://tailwindcss.com/img/card-left.jpg"
-            alt=""
-            class="h-full w-full object-cover"
-          />
-        </div>
-      </div>
-      <div class="p-2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-        <div class="bg-white p-2 shadow h-64 md:h-48 w-full">
-          <img
-            src="https://tailwindcss.com/img/card-left.jpg"
-            alt=""
-            class="h-full w-full object-cover"
-          />
-        </div>
-      </div>
-      <div class="p-2 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5">
-        <div class="bg-white p-2 shadow h-64 md:h-48 w-full">
-          <img
-            src="https://tailwindcss.com/img/card-left.jpg"
-            alt=""
-            class="h-full w-full object-cover"
-          />
         </div>
       </div>
     </div>
@@ -138,53 +69,21 @@ export default {
   name: "Home",
   data() {
     return {
-      list: [
-        {
-          id: 0,
-          fly_start_time: '06:45',
-          fly_end_time: '08:45',
-          departure: '大兴国际',
-          destination: '浦东机场T1',
-          price: '200',
-          class: '经济舱',
-          airline: '上海航空9C8542 波音787'
-        },
-        {
-          id: 1,
-          fly_start_time: '06:45',
-          fly_end_time: '08:45',
-          departure: '大兴国际',
-          destination: '浦东机场T1',
-          price: '200',
-          class: '经济舱',
-          airline: '上海航空9C8542 波音787'
-        }
-      ],
+      list: null,
       total: 0,
       listLoading: true,
       listQuery: {
         page: 1,
-        limit: 10
+        limit: 20
       },
-      priceList: [
-        {'value': 100},
-        {'value': 200},
-        {'value': 300},
-        {'value': 400},
-        {'value': 500},
-        {'value': 600},
-        {'value': 700},
-        {'value': 800},
-        {'value': 900},
-        {'value': 1000},
-        {'value': 1100},
-        {'value': 1200},
-      ],
+      priceList: null,
     }
+  },
+  mounted() {
   },
   created() {
     this.getList();
-    // this.getPriceList();
+    this.getPriceList();
   },
   methods: {
     getList() {
@@ -198,7 +97,7 @@ export default {
     getPriceList() {
       this.listLoading = true
       fetchPriceList().then(response => {
-        this.priceList = response.data.priceList
+        this.priceList = response.data.items
         this.listLoading = false
       })
     }
@@ -207,4 +106,19 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.line {
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.line::after {
+  content: " ";
+  border-bottom: 1px solid #dfdfdf;
+  width: 7px;
+  float: right;
+  margin-top: 1px;
+  display: inline-block;
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
 </style>

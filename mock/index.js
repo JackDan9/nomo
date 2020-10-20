@@ -7,11 +7,9 @@ const mocks = [
   ...home
 ]
 
-/**
- * for front mock
- * please use it cautiously, it will redefine XMLHttpRequest,
- * which will cause many of your third-party libraries to be invalidated(like progress event).
- */
+// for front mock
+// please use it cautiously, it will redefine XMLHttpRequest,
+// which will cause many of your third-party libraries to be invalidated(like progress event).
 function mockXHR() {
   // mock patch
   // https://github.com/nuysoft/Mock/issues/300
@@ -45,7 +43,7 @@ function mockXHR() {
     }
   }
 
-  for(const i of mocks) {
+  for (const i of mocks) {
     Mock.mock(new RegExp(i.url), i.type || 'get', XHR2ExpressReqWrap(i.response))
   }
 }
@@ -54,4 +52,5 @@ module.exports = {
   mocks,
   mockXHR
 }
+
 
