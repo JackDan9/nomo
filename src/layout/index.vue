@@ -1,7 +1,7 @@
 <template>
   <div class="lg">
-    <!-- <global-header /> -->
-    <recall-header />
+    <home-header v-if="this.$route.name === 'Home'" />
+    <recall-header v-if="this.$route.name === 'Recall'" />
     <div class="lg:container lg:mx-auto">
       <app-main />
     </div>
@@ -15,11 +15,22 @@ import RecallHeader from '@/components/header/recall/RecallHeader';
 
 export default {
   name: 'Layout',
+  data() {
+    return {
+
+    }
+  },
   watch: {
     '$route': 'rounterChange'
   },
-  routerChange: function(to, from) {
-    console.log(to.path)
+  created() {
+    console.log(this.$route.name)
+  },
+  methods: {
+    routerChange: function(to, from) {
+      console.log(to.path)
+      console.log(from.path)
+    },
   },
   components: {
     AppMain,

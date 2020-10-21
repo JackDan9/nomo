@@ -82,8 +82,8 @@ export default {
   mounted() {
   },
   created() {
-    this.getList();
-    this.getPriceList();
+    this.getList()
+    this.getPriceList()
   },
   methods: {
     getList() {

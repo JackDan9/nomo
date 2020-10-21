@@ -1,7 +1,7 @@
-const Mock = require('mockjs');
+const Mock = require('mockjs')
 
-const List = [];
-const count = 100;
+const List = []
+const count = 100
 
 for(let i = 0; i < count; i++) {
   List.push(Mock.mock({
