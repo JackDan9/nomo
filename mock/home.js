@@ -47,7 +47,7 @@ module.exports = [
     url: '/nomo/home/list',
     type: 'get',
     response: config => {
-      const { page = 1, limit = 20, sort } = config.query;
+      const { page = 1, limit = 40, sort } = config.query;
 
       let mockList = List;
 
