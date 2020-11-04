@@ -24,7 +24,6 @@ export default {
     '$route': 'rounterChange'
   },
   created() {
-    console.log(this.$route.name)
   },
   methods: {
     routerChange: function(to, from) {
