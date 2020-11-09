@@ -36,6 +36,17 @@ export const constantRoutes = [
         name: 'Recall'
       }
     ]
+  },
+  {
+    path: '/pullup',
+    component: Layout,
+    children: [
+      {
+        path: '',
+        component:() => import('@/views/pullup/index'),
+        name: 'Pullup'
+      }
+    ]
   }
 ];
 

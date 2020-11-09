@@ -1,8 +1,8 @@
 <template>
   <div class="lg">
-    <home-header v-if="this.$route.name === 'Home'" />
-    <recall-header v-if="this.$route.name === 'Recall'" />
-    <div class="lg:container lg:mx-auto">
+    <home-header class="fixed z-50 top-0 w-full" v-if="this.$route.name === 'Home'" />
+    <recall-header class="fixed z-50 top-0 w-full" v-else />
+    <div class="w-full h-full mt-48 sm:mt-48 md:mt-48 lg:mt-20 xl:mt-24">
       <app-main />
     </div>
   </div>
