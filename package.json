@@ -14,7 +14,6 @@
     "@better-scroll/mouse-wheel": "^2.0.5",
     "@better-scroll/pull-up": "^2.0.5",
     "axios": "^0.20.0",
-    "better-scroll": "^2.0.5",
     "core-js": "^3.6.5",
     "element-ui": "^2.13.2",
     "moment": "^2.29.1",
@@ -52,7 +51,8 @@
     },
     "rules": {
       "no-debugger": "off",
-      "no-console": "off"
+      "no-console": "off",
+      "no-unused-vars": "on"
     }
   },
   "browserslist": [

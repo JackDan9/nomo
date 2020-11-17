@@ -1,5 +1,5 @@
 <template>
-  <div class="h-48 sm:h-48 md:h-48 lg:h-20 xl:h-24 bg-blue-600">
+  <div class="h-48 lg:h-24 bg-blue-600">
     <div class="lg:container lg:mx-auto 
                 flex flex-wrap 
                 items-center justify-between h-full">
@@ -13,7 +13,7 @@
         <div class="flex flex-col w-1/2 sm:w-auto md:w-full lg:w-32 xl:w-1/2 justify-center items-start">
           <span class="hidden sm:hidden md:hidden lg:inline-block text-sm text-gray-400 px-1 py-1">出发地</span>
           <div class="text-lg text-gray-800 px-1 w-full">
-            <city-picker field="city" placeholder="城市" :city-list="cityList" :no-hot="false" :value.sync="cityId1"></city-picker>
+            <city-picker field="city" placeholder="城市" v-bind="cityList" v-bind:no-hot="false" v-bind:value="cityId1"></city-picker>
           </div>
         </div>
         <div class="h-full inline-flex justify-center items-center text-gray-400">
@@ -22,7 +22,7 @@
         <div class="flex flex-col w-1/2 sm:w-auto md:w-full lg:w-32 xl:w-1/2 justify-center items-end sm:justify-center sm:items-end md:justify-center md:items-end lg:justify-center lg:items-start xl:justify-center xl:items-start">
           <span class="hidden sm:hidden md:hidden lg:inline-block text-sm text-gray-400 px-1 py-1">目的地</span>
           <div class="text-lg text-gray-800 px-1 w-full">
-            <city-picker field="city" placeholder="城市" :city-list="cityList" :no-hot="false" :value.sync="cityId"></city-picker>
+            <city-picker field="city" placeholder="城市" v-bind:city-list="cityList" v-bind:no-hot="false" v-bind:value="cityId"></city-picker>
           </div>
         </div>
       </div>
@@ -38,7 +38,7 @@
                     text-lg 
                     text-right sm:text-right md:text-right lg:text-left xl:text-left 
                     text-gray-800 px-1">
-                    <date-picker class="w-full" :date="startTime" :option="option" :limit="limit"></date-picker>
+                    <date-picker class="w-full" v-bind:date="startTime" v-bind:option="option" v-bind:limit="limit"></date-picker>
         </div>
       </div>
       <div class="flex 
@@ -50,7 +50,7 @@
           <!-- <img src="" alt="" class="h-8 rounded-full border" /> -->
         </div>
         <div class="text-white text-base">
-          <input placeholder="搜索航班" class="text-lg text-white appearance-none placeholder-white" type="text" style="border-radius: none; outline:none; background: initial"/>
+          <input :placeholder="searchPlaceholder" class="text-lg text-white appearance-none placeholder-white" type="text" style="border-radius: none; outline:none; background: initial"/>
         </div>
       </div>
     </div>
@@ -68,14 +68,15 @@ export default {
   name: "GlobalHeader",
   data () {
     return {
+      searchPlaceholder: "搜索航班",
       cityId: '',
       cityId1: '',
       cityList: cityList,
       startTime: {
-        time: ''
+        time: '2020-11-17'
       },
       endtime: {
-        time: ''
+        time: '2026'
       },
       option: {
         type: 'day',

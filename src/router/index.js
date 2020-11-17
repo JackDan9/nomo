@@ -34,6 +34,11 @@ export const constantRoutes = [
         path: '',
         component: () => import('@/views/recall/index'),
         name: 'Recall'
+      },
+      {
+        path: 'detail',
+        omponent: () => import('@/views/recallDetail/index'),
+        name: 'Detail'
       }
     ]
   },
@@ -43,11 +48,23 @@ export const constantRoutes = [
     children: [
       {
         path: '',
-        component:() => import('@/views/pullup/index'),
+        component: () => import('@/views/pullup/index'),
         name: 'Pullup'
       }
     ]
-  }
+  },
+  {
+    path: '/recallDetail',
+    name: 'recallDetail',
+    component: Layout,
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/recallDetail/index'),
+        name: 'RecallDetail',
+      }
+    ]
+  },
 ];
 
 const createRouter = () => new Router({

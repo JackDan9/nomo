@@ -3,10 +3,12 @@ const { param2Obj } = require('./utils')
 
 const home = require('./home')
 const recall = require('./recall')
+const recallDetail = require('./recall-detail')
 
 const mocks = [
   ...home,
-  ...recall
+  ...recall,
+  ...recallDetail
 ]
 
 // for front mock

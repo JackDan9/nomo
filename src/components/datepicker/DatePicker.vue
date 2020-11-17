@@ -673,7 +673,7 @@ export default {
   background: #3F51B5;
   overflow: hidden;
   font-size: 16px;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: 400;
   position: fixed;
   display: block;
@@ -699,7 +699,7 @@ export default {
   width: 400px;
   max-width: 100%;
   height: 280px;
-  text-align: start!important;
+  text-align: start !important;
 }
 .cov-picker-box td {
   height: 34px;
@@ -780,7 +780,7 @@ table {
 }
 .cov-date-caption {
   width: 60%;
-  padding: 50px 0!important;
+  padding: 50px 0 !important;
   box-sizing: border-box;
   font-size: 24px;
 }
@@ -812,7 +812,7 @@ table {
   margin-left: -7px;
   left: 50%;
   line-height: 0;
-  content: '';
+  content: "";
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   transform: rotate(45deg);
@@ -829,7 +829,7 @@ table {
   top: 50%;
   left: 50%;
   line-height: 0;
-  content: '';
+  content: "";
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   transform: rotate(-45deg);

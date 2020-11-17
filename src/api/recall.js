@@ -23,3 +23,11 @@ export function fetchImageList(query) {
     params: query
   })
 }
+
+export function detail(query) {
+  return request({
+    url: '/nomo/recall/detail',
+    method: 'get',
+    params: query
+  })
+}

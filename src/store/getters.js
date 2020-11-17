@@ -1,5 +1,5 @@
-// const getters = {
-//   name: state => state.user.name,
-// }
+const getters = {
+  sidebar: state => state.recall.sidebar,
+}
 
-// export default getters;
+export default getters;
